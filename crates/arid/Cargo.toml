@@ -1,0 +1,8 @@
+[package]
+name = "arid"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/marchalbersma/arid"
+license = "Apache-2.0 OR MIT"
+keywords = ["arid", "utility", "template"]
+categories = ["development-tools", "template-engine"]
