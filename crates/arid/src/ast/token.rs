@@ -1,4 +1,5 @@
 /// Represents a token.
+#[derive(Debug, Eq, PartialEq)]
 pub struct Token {
     /// Token type.
     pub kind: TokenKind,
