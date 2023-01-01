@@ -19,8 +19,23 @@ impl Token {
 /// Represents the token types.
 #[derive(Debug, Eq, PartialEq)]
 pub enum TokenKind {
+    /// Opening template delimiter: `{{`, `{%` or `{#`.
+    OpenDelim(Delim),
+    /// Closing template delimiter: `}}`, `%}` or `#}`.
+    CloseDelim(Delim),
     /// Text which will be output as is.
     Raw,
+}
+
+/// Represents the template delimiters.
+#[derive(Debug, Eq, PartialEq)]
+pub enum Delim {
+    /// Expression delimiter: `{{` or `}}`.
+    Expr,
+    /// Statement delimiter: `{%` or `%}`.
+    Stmt,
+    /// Comment delimiter: `{#` or `#}`.
+    Cmnt,
 }
 
 #[cfg(test)]
